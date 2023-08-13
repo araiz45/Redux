@@ -1,6 +1,9 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 function Navbar() {
+  // eslint-disable-next-line
+  const amount = useSelector(state => state.amount);
   return (
     <div><nav className="navbar navbar-expand-lg bg-dark navbar-dark">
     <div className="container-fluid">
@@ -17,7 +20,7 @@ function Navbar() {
             <a className="nav-link" href="/">Link</a>
           </li>
         </ul>
-        <button type="button" class="btn btn-primary btn-sm" disabled>Your Balance: 1000</button>
+        <button type="button" class="btn btn-primary btn-sm" disabled>Your Balance: {amount}</button>
       </div>
     </div>
   </nav></div>
